@@ -1,0 +1,16 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/php
+{
+	"name": "Ansible",
+	"image": "registry.access.redhat.com/ubi9/python-312:latest",
+		
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"redhat.ansible"
+			]
+		}
+	},
+	"onCreateCommand": "pip3 install --no-cache-dir ansible-core ansible-lint ansible-creator ansible-navigator ",
+	"updateContentCommand": "ansible-galaxy collection install -r requirements.yaml"
+}

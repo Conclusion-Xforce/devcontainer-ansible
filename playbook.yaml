@@ -1,0 +1,19 @@
+---
+- name: Hello world
+  hosts: localhost
+  gather_facts: true
+  tasks:
+    - name: Print OS and Ansible version
+      ansible.builtin.debug:
+        msg: "This is {{ ansible_distribution }} with version {{ ansible_distribution_version }} and Ansible version {{ ansible_version }}"
+    - name: Show hypervisor facts
+      ansible.builtin.debug:
+        msg: "Hypervisor is {{ ansible_virtualization_type }} with version {{ ansible_virtualization_role }}"
+    - name: Fetch JSON data from URL
+      ansible.builtin.uri:
+        url: "https://jsonplaceholder.typicode.com/posts/1"
+        return_content: true
+      register: json_data
+    - name: Print JSON data
+      ansible.builtin.debug:
+        msg: "{{ json_data.content | from_json }}"
