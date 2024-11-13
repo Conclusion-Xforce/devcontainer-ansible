@@ -15,3 +15,11 @@ VSCode devcontainer for Ansible development
 
 1. Install Podman using your favorite package manager.
 2. Open the repository in VS Code and click on the "Reopen in Container" button in the notification that appears at the bottom right corner of the window.
+
+## Run Ansible
+
+Execute the following command to run the included Ansible playbook:
+
+```shell
+$ ansible-playbook playbook.yaml
+```
