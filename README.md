@@ -23,3 +23,4 @@ Execute the following command to run the included Ansible playbook:
 ```shell
 $ ansible-playbook playbook.yaml
 ```
+![image](https://github.com/user-attachments/assets/9efeb925-8085-4405-a157-4334b1ceff62)
